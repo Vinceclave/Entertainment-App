@@ -1,0 +1,18 @@
+.tv-series-container h1 {
+    color: var(--pure-white);
+    margin-bottom: 2rem;
+}
+
+.tv-series-container {
+    padding-right: 2rem;
+}
+
+.tv-series-container .tv-series-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.tv-series-container .tv-series-list > div {
+    color: var(--pure-white);
+}

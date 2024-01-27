@@ -1,0 +1,18 @@
+.movies-container h1 {
+    color: var(--pure-white);
+    margin-bottom: 2rem;
+}
+
+.movies-container {
+    padding-right: 2rem;
+}
+
+.movies-container .movie-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.movies-container .movie-list > div {
+    color: var(--pure-white);
+}

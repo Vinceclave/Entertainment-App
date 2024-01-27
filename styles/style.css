@@ -1,0 +1,431 @@
+body {
+    position: relative;
+    background-color: var(--dark-blue);
+
+
+    overflow-y: scroll;  /* Enable horizontal scrolling */
+    scrollbar-width: thin; /* For Firefox compatibility */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+aside {
+    position: sticky;
+    align-self: stretch;
+    margin-inline: 2rem;
+    background-color: var(--semi-dark-blue);
+    padding: 2.125rem;
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    top: 1.5rem;
+    left: 0; 
+    margin-bottom: 2rem;
+}
+
+body::-webkit-scrollbar {
+    width: 0.2rem;
+    background-color: var(--dark-blue);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--pure-white);
+}
+
+aside .logo {
+    margin-bottom: 4rem;
+}
+
+aside .logo img {
+    min-width: 35px;
+}
+
+aside .nav-list {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+aside .nav-list .nav-item svg path {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+aside .nav-list .nav-item:hover svg path{
+    fill: var(--pure-white);
+}
+
+aside .nav-list .nav-item:last-child {
+    width: 2rem;
+    margin-top: auto;
+}
+
+
+main {
+    flex: 1;
+    margin-right: auto;
+    align-self: stretch;
+    padding-block-start: 1rem;
+    padding-block-end: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.625rem;
+}
+
+main > .search-container {
+    position: relative;
+    margin-block-start: 2rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+main > .search-container::before {
+    content: '';
+    background-image: url('../assets/icon-search.svg');
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 40px;
+    color: white;
+    position: relative;
+    align-self: flex-end;
+}
+
+main > .search-container input {
+    font-size: var(--size-hm);
+    color: white;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-block: 0.5rem;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+main > .search-container input:hover,
+main > .search-container input:focus {
+    border-bottom: 1px solid var(--greyish-blue);
+}
+
+
+.movies-container .bookmarked-movie-lists,
+.tv-series-container .bookmarked-tv-lists,
+.tv-series-container .tv-series-list,
+.movies-container .movie-list,
+main > .recommended-container .recommended-list {
+    gap: 1.5rem !important;
+}
+
+.trend-list > div{
+    border-radius: 1rem;
+}
+
+.trend-list > div,
+.movies-container .movie-list > div,
+.tv-series-container .tv-series-lis > div,
+main > .recommended-container .recommended-list > div{
+    position: relative;
+}
+
+.trend-list > div,
+.movies-container .movie-list > div, 
+.tv-series-container .tv-series-list > div,
+main > .recommended-container .recommended-list > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: scale 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+
+.trend-list > div img,
+.movies-container .movie-list > div img,
+.tv-series-container .tv-series-list img,
+main > .recommended-container .recommended-list > div img {
+    transition: filter 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.trend-list > div:hover img,
+.movies-container .movie-list > div:hover img,
+.tv-series-container .tv-series-list > div:hover img,
+main > .recommended-container .recommended-list > div:hover img {
+    filter:brightness(0.5);
+
+}
+
+.trend-list > div p,
+.movies-container .movie-list > div p,
+.tv-series-container .tv-series-list > div p,
+main > .recommended-container .recommended-list > div p {
+    display: flex;
+    gap: 1rem;
+}
+
+.trend-list > div p,
+.movies-container .movie-list > div p,
+.tv-series-container .tv-series-list > div p,
+main > .recommended-container .recommended-list > div p  {
+
+    margin-bottom: 0.5rem;
+}
+
+.trend-list > div p span > *,
+.movies-container .movie-list > div p span > *,
+.tv-series-container .tv-series-list > div p span > *,
+main > .recommended-container .recommended-list > div p span > *{
+    color: var(--pure-white);
+    opacity: 0.7;
+    margin-inline: 0.5rem;
+}
+
+.trend-list > div p span > *:first-child,
+.movies-container .movie-list > div p span > *:first-child,
+.tv-series-container .tv-series-list > div p span > *:first-child,
+main > .recommended-container .recommended-list > div p span > *:first-child { margin-inline-start: unset; }
+
+.trend-list > div p span > *:last-child,
+.movies-container .movie-list > div p span > *:last-child,
+.tv-series-container .tv-series-list > div p span > *:last-child,
+main > .recommended-container .recommended-list > div p span > *:last-child { margin-inline-end: unset;}
+
+
+.trend-list > div .bookmark-btn,
+.movies-container .movie-list > div .bookmark-btn,
+.tv-series-container .tv-series-list > div .bookmark-btn,
+main > .recommended-container .recommended-list > div .bookmark-btn {
+    position: absolute;
+    background: unset;
+    border: unset;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(22,29,47,0.5074404761904762) 100%, rgba(255,255,255,0) 100%);
+
+    width: 2rem;
+    height: 2rem;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+
+
+.trend-list > div > .play-btn,
+.movies-container .movie-list > div .play-btn,
+.tv-series-container .tv-series-list > div .play-btn,
+main > .recommended-container .recommended-list > div .play-btn {
+    text-wrap: nowrap;
+    font-size: var(--size-hxs);
+    color: var(--pure-white);
+    background: linear-gradient(90deg, rgba(255,255,255,0.3) 100%, rgba(22,29,47,1) 100%);
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 2rem;
+
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+
+.trend-list > div:hover .play-btn,
+.movies-container .movie-list > div:hover .play-btn,
+.tv-series-container .tv-series-list > div:hover .play-btn,
+main > .recommended-container .recommended-list > div:hover .play-btn{
+    display: block;
+
+}
+
+
+.trend-list > div .play-btn > * path,
+.movies-container .movie-list > div .play-btn > * path,
+.tv-series-container .tv-series-list > div .play-btn > * path,
+main > .recommended-container .recommended-list > div .play-btn > * path {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.trend-list > div .play-btn > * ,
+.movies-container .movie-list > div  .play-btn > *,
+.tv-series-container .tv-series-list > div .play-btn > *,
+main > .recommended-container .recommended-list > div .play-btn > * {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+
+.trend-list > div .play-btn:hover,
+.movies-container .movie-list > div .play-btn:hover,
+.tv-series-container .tv-series-list > div .play-btn:hover,
+main > .recommended-container .recommended-list > div .play-btn:hover {
+    background-color: var(--pure-white);
+    color: var(--dark-blue);
+}
+
+.trend-list > div .play-btn:hover > * path,
+.movies-container .movie-list > div .play-btn:hover > * path
+.tv-series-container .tv-series-list > div .play-btn:hover > * path,
+main > .recommended-container .recommended-list > div .play-btn:hover > * path {
+    fill: var(--dark-blue);
+
+}
+
+.trend-list > div .bookmark-btn > *,
+.movies-container .movie-list > div .bookmark-btn > *,
+.tv-series-container .tv-series-list > div .bookmark-btn > *,
+main > .recommended-container .recommended-list > div .bookmark-btn > *{
+    vertical-align: middle;
+}
+
+.trend-list > div .bookmark-btn > * path,
+.movies-container .movie-list > div .bookmark-btn > * path,
+
+.tv-series-container .tv-series-list > div .bookmark-btn > * path,
+main > .recommended-container .recommended-list > div .bookmark-btn > * path{ 
+    fill: none;
+    stroke: white;
+    width: 2rem;
+    height: 2rem;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.trend-list > div .bookmark-btn:hover,
+.movies-container .movie-list > div .bookmark-btn:hover,
+.tv-series-container .tv-series-list > div .bookmark-btn:hover,
+main > .recommended-container .recommended-list > div .bookmark-btn:hover {
+    background: var(--pure-white) !important;
+    opacity: unset;
+}
+
+.trend-list > div .bookmark-btn:hover > * path,
+.movies-container .movie-list > div .bookmark-btn:hover > * path,
+.tv-series-container .tv-series-list > div .bookmark-btn:hover > * path,
+main > .recommended-container .recommended-list > div .bookmark-btn:hover > * path {
+    stroke: var(--dark-blue);
+}
+
+.trend-list > div  img,
+.movies-container .movie-list > div  img,
+.tv-series-container .tv-series-list > div img,
+main > .recommended-container .recommended-list > div img{ 
+    margin-bottom: 0.5rem;
+    align-self: stretch;
+    border-radius: 1rem;
+} 
+
+
+
+
+@media only screen and (max-width:1010px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        padding: 1.4375rem;
+        position: relative;
+        margin-inline: 1.4375rem;
+        height: unset;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        top: 1.4375rem;
+        border-radius: 1rem;
+    }
+    aside .logo { margin-bottom: unset; margin-right: auto;}
+
+    aside .nav-list {
+        align-items: end;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    aside .nav-list .nav-item:first-child,
+    aside .nav-list .nav-item:last-child {
+        margin-left: auto;
+    }
+
+    main {
+        margin-right: unset;
+    }
+
+    main > .trending-container {
+        padding-inline-start: 1.4375rem;
+    }
+
+    main > .trending-container > .trend-list > * {
+        aspect-ratio: 12/5 !important;
+    }
+
+    .tv-series-container,
+    .movies-container,
+    main > .search-container,
+    main > .recommended-container {
+        padding-inline: 1.4375rem !important;
+        margin: unset;
+    }
+
+   .movies-container .bookmarked-movie-lists,
+   .tv-series-container .bookmarked-tv-lists,
+   .tv-series-container .tv-series-list,
+   .movies-container .movie-list,
+    main > .recommended-container .recommended-list {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 678px) {
+    aside {
+        padding: 1.25rem;
+        border-radius: unset;
+        top: unset;
+        margin-inline: unset;
+        margin-bottom: 1.6875rem;
+    }
+
+    main {
+        padding-top: unset;
+        gap: 1.3125rem;
+    }
+
+   .movies-container .bookmarked-movie-lists,
+   .tv-series-container .bookmarked-tv-lists,
+   .tv-series-container .tv-series-list,
+   .movies-container .movie-list,
+    main > .recommended-container .recommended-list  {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    main > .search-container > input {
+        font-size: 1rem;
+    }
+
+
+   
+}
+
+@media only screen and (max-width: 420px) {
+    .movies-container .bookmarked-movie-lists,
+    .tv-series-container .bookmarked-tv-lists,
+    .tv-series-container .tv-series-list,
+   .movies-container .movie-list,
+    main > .recommended-container .recommended-list {
+        grid-template-columns: 1fr !important;
+    }
+
+}

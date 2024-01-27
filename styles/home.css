@@ -1,0 +1,79 @@
+.recommended-container h1,
+.trending-container h1 {
+    color: var(--pure-white);
+
+    margin-bottom: 2rem;
+}
+
+.trend-list {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    overflow-x: scroll;  /* Enable horizontal scrolling */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.trend-list::-webkit-scrollbar {
+    height: 0.2rem;
+}
+
+.trend-list::-webkit-scrollbar-thumb {
+    width: 200px;;
+    background-color: var(--pure-white);
+}
+
+.trend-list > div {
+    color: var(--pure-white  );
+    flex-shrink: 0;
+    flex-basis: 430px;
+
+}
+
+
+.trend-list .description {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.trend-list .description p{
+    margin-bottom: unset;
+}
+
+.trend-list > div > .play-btn {
+    top: 50%;
+}
+
+.trend-list .description,
+.recommended-list .description {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.trend-list img {
+    aspect-ratio: 16/9;
+}
+
+.recommended-container {
+    margin-right: 2rem;
+    
+}
+
+.recommended-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.recommended-list > div {
+    color: var(--pure-white) !important;
+
+}
+
+
+
+
+@media only screen and (max-width: 678px) {
+
+
+}

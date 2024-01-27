@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap');
+
+:root {
+    --red: #FC4747;
+    --dark-blue: #10141E;
+    --greyish-blue: #5A698F;
+    --semi-dark-blue: #161D2F;
+    --pure-white: #FFFFFF;
+
+    --font: 'Outfit', sans-serif;
+    --light: 300;
+    --medium: 500;
+
+    --size-hl: 2rem;
+    --size-hm: 1.5rem;
+    --size-hs: var(--size-hm);
+    --size-hxs: 1.125rem;
+
+    --size-bm: 0.9375rem;
+    --size-bs: 0.8125rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    line-height: 1.5;
+    
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+}
+
+ol, li { list-style-type: none;}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--size-bs);
+    font-weight: var(--light);
+    min-width: 20rem;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+img, picture, video, canvas {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+
+h3, h4 {
+    font-weight: var(--medium);
+}
+
+h1 { font-size: var(--size-hl); }
+h2 { font-size: var(--size-hm); }
+h3 { font-size: var(--size-hs); }
+h4 { font-size: var(--size-hxs); }
+
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: unset;
+}

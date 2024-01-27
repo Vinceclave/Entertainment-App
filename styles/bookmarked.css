@@ -1,0 +1,17 @@
+.movies-container h1, .tv-series-container h1 {
+    color: var(--pure-white);
+    margin-bottom: 2rem;
+}
+
+.movies-container .bookmarked-movie-lists,
+.tv-series-container .bookmarked-tv-lists {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.movies-container .bookmarked-movie-lists > div,
+.tv-series-container .bookmarked-tv-lists > div {
+    background-color: var(--greyish-blue);
+}
