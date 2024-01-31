@@ -86,7 +86,7 @@ fetchData()
 
         const bookmarkButton = document.querySelector('.bookmark-btn');
 
-        bookmarkButton.addEventListener('click', e => bookmarkListener(e, data[key]);
+        bookmarkButton.addEventListener('click', e => bookmarkListener(e, data[key]));
             
         container.appendChild(content);
     }
