@@ -94,8 +94,15 @@ fetchData()
 
 
    const bookmarkListener = (e, data) => {
+        let isBookmarked = data.isBookmarked;
 
-        console.log(data);
+        if (!isBookmarked) { 
+            data.isBookmarked = true;
+            console.log(data[key])
+       } else {
+            data.isBookmarked = false;
+            console.log(data[key])
+        }
        
    }
    export const resizeImageContent = (data, key) => {
