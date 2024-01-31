@@ -83,9 +83,21 @@ fetchData()
                            
                       
                     `;
+
+        const bookmarkButton = document.querySelector('.bookmark-btn');
+
+        bookmarkButton.addEventListener('click', e => bookmarkListener(e, data[key]);
+            
         container.appendChild(content);
     }
-    
+
+
+
+   const bookmarkListener = (e, data) => {
+
+        console.log(data);
+       
+   }
    export const resizeImageContent = (data, key) => {
         const widthResize = window.innerWidth;
     
