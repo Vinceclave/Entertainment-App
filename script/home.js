@@ -98,10 +98,10 @@ fetchData()
 
         if (!isBookmarked) { 
             data.isBookmarked = true;
-            console.log(data[key])
+            console.log(data)
        } else {
             data.isBookmarked = false;
-            console.log(data[key])
+            console.log(data)
         }
        
    }
