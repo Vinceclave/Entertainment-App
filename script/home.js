@@ -98,11 +98,11 @@ fetchData()
 
         if (!isBookmarked) { 
             data.isBookmarked = true;
-            e.srcElement.classList.add('bookmarked);
+            e.srcElement.classList.add('bookmarked');
             console.log(data)
        } else {
             data.isBookmarked = false;
-            e.srcElement.classList.remove('bookmarked);
+            e.srcElement.classList.remove('bookmarked');
             console.log(data)
         }
        
