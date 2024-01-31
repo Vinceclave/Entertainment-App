@@ -214,7 +214,19 @@ main > .recommended-container .recommended-list > div .bookmark-btn {
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.trend-list > div .bookmark-btn.bookmarked,
+.movies-container .movie-list > div .bookmark-btn.bookmarked,
+.tv-series-container .tv-series-list > div .bookmark-btn.bookmarked ,
+main > .recommended-container .recommended-list > div .bookmark-btn.bookmarked {
+    background: var(--pure-white);
+}
 
+.trend-list > div .bookmark-btn.bookmarked path,
+.movies-container .movie-list > div .bookmark-btn.bookmarked path,
+.tv-series-container .tv-series-list > div .bookmark-btn.bookmarked path,
+main > .recommended-container .recommended-list > div .bookmark-btn.bookmarked path{
+    fill: var(--dark-blue);
+}
 
 
 
